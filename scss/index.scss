@@ -1,0 +1,121 @@
+@import "index2";
+
+@mixin padding-y($p) {
+  padding-top: $p;
+}
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  font-family: $font;
+  margin: 0;
+  header {
+    @include padding-y(1.5%);
+    flex: 0 0 auto;
+    background-color: $color-back;
+    margin: 0;
+    ul {
+      margin: 0;
+      li {
+        display: inline-flex;
+        color: white;
+        padding-left: 2%;
+      }
+      li:hover {
+        color: aqua;
+      }
+    }
+  }
+  main {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: $color-back;
+
+    .col2 {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 3em;
+      margin-right: 3em;
+
+      .col1 {
+        width: 50%;
+        margin-right: 2em;
+        display: flex;
+      }
+
+      .button1 {
+        background-color: $color-back2;
+      }
+      .button1:hover {
+        background-color: rgb(2, 136, 136);
+      }
+      button {
+        background-color: $color-green;
+        border: transparent;
+        padding: 10px;
+        border-radius: 3px;
+        color: white;
+      }
+    }
+    button:hover {
+      background-color: aqua;
+    }
+  }
+  footer {
+    background-color: $color-back2;
+    p {
+      color: transparent;
+      margin: 0;
+      flex-shrink: 0;
+      @include padding-y(2%);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    .container,footer,header{min-width: 100%;
+        width: 768px;
+       
+    }
+    img{width: 60%;}
+}
+
+@media screen and (max-width: 768px) {
+    header,footer,main{
+        min-width: 100%;
+        width: 580px;
+       
+    }
+    main{ .col2{
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 60%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+    }}
+}
+@media screen and (max-width: 480px) {
+    main,footer,header{ min-width: 100%;
+        width: 425px;
+    }
+    main{
+        .col1{min-width: 280px;}
+         img{min-width: 300px;
+        width: 300px;}
+   
+    }}
+
+
+    @media screen and (max-width: 425px) {
+        main,footer,header{width:100%;
+        }}

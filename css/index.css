@@ -1,0 +1,115 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+body header {
+  padding-top: 1.5%;
+  flex: 0 0 auto;
+  background-color: hsl(231, 93%, 42%);
+  margin: 0;
+}
+body header ul {
+  margin: 0;
+}
+body header ul li {
+  display: inline-flex;
+  color: white;
+  padding-left: 2%;
+}
+body header ul li:hover {
+  color: aqua;
+}
+body main {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: hsl(231, 93%, 42%);
+}
+body main .col2 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+body main .col2 .col1 {
+  width: 50%;
+  margin-right: 2em;
+  display: flex;
+}
+body main .col2 .button1 {
+  background-color: rgb(20, 5, 89);
+}
+body main .col2 .button1:hover {
+  background-color: rgb(2, 136, 136);
+}
+body main .col2 button {
+  background-color: hsla(188, 100%, 79%, 0.536);
+  border: transparent;
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+}
+body main button:hover {
+  background-color: aqua;
+}
+body footer {
+  background-color: rgb(20, 5, 89);
+}
+body footer p {
+  color: transparent;
+  margin: 0;
+  flex-shrink: 0;
+  padding-top: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+  .container, footer, header {
+    min-width: 100%;
+    width: 768px;
+  }
+  img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header, footer, main {
+    min-width: 100%;
+    width: 580px;
+  }
+  main .col2 {
+    display: flex;
+    flex-direction: column;
+  }
+  main .col2 img {
+    width: 60%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main, footer, header {
+    min-width: 100%;
+    width: 425px;
+  }
+  main .col1 {
+    min-width: 280px;
+  }
+  main img {
+    min-width: 300px;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 425px) {
+  main, footer, header {
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */
